@@ -14,27 +14,50 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,600&family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;1,800&display=swap"
         rel="stylesheet">
+    <!-- bs inicia-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- bs fin-->
     <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
     <header>
-        <aside>
-            <img src="multimdia/iconomate.png" alt="dibujo de mate abstracto">
-        </aside>
-        <div class="logo">
-            Mate.<span>ando</span>
-        </div>
-        <nav class="barra">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="page/preparacion.html">Preparación</a></li>
-                <li><a href="page/beneficios.html">Beneficios</a></li>
-                <li><a href="page/tiposdeyerbas.html">Tipos</a></li>
-                <li><a href="page/contacto.html">Contacto</a></li>
-            </ul>
+        <!-- navbar inicia-->
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <aside>
+                    <img src="multimdia/iconomate.png" alt="dibujo de mate abstracto">
+                </aside>
+                <span>Mate.ando</span>
+            </a>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="collapsibleNavbar ">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Page/preparacion.html">Preparación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Page/beneficios.html">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Page/tiposdeyerbas.html">Tipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Page/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-    </header>
+        <!-- navbar fin-->
+</header>
     <main>
         <div class="call">
             <h1>Mate.ando</h1>
@@ -53,38 +76,57 @@
         </div>
         <div class="sub">
     </main>
-    <div class="sub1">
-        <h2>Regiones</h2>
+    <h2>Regiones</h2>
+    <div class="sub1 container-fluid">
+        <div class="row">
+            <div class="nleft col-sm-6">
+                <img class="mapa d-flex justify-content-center" src="multimdia/argentinaregiones.png" alt="mapa de argentina y sus regiones">
+            </div>
+            <div class="nright col-sm-6">
+                <section>
+                    <ul>
+                        <li><span>Norte:</span> se acostumbra más tomarlo amargo, y se usa el mate de palo santo, se endulza con
+                            cáscaras de naranja o azúcar quemada. En Santiago del Estero es costumbre endulzarlo con miel.</li>
+                        <li><span>Litoral:</span> se toma también amargo, pero en verano se toma frío (tereré) y se saboriza con
+                            hierbas medicinales como la manzanilla y el cedrón.</li>
+                        <li><span>Centro:</span> se acostumbra agregarle otras variantes: hierbas tales como peperina, menta, poleo
+                            y cedrón. En Córdoba es bastante común tomar mate dulce con azúcar.</li>
+                        <li> <span>Cuyo:</span> se le suele añadir cáscara de naranja o hierbas como las anteriores.</li>
+                        <li> <span>Sur:</span> por lo general se toma amargo, y más caliente que en el resto del país, por las bajas
+                            temperaturas que allí existen.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        
     </div>
-    <img class="mapa" src="multimdia/argentinaregiones.png" alt="mapa de argentina y sus regiones">
-    <section>
-        <ul>
-            <li><span>Norte:</span> se acostumbra más tomarlo amargo, y se usa el mate de palo santo, se endulza con
-                cáscaras de naranja o azúcar quemada. En Santiago del Estero es costumbre endulzarlo con miel.</li>
-            <li><span>Litoral:</span> se toma también amargo, pero en verano se toma frío (tereré) y se saboriza con
-                hierbas medicinales como la manzanilla y el cedrón.</li>
-            <li><span>Centro:</span> se acostumbra agregarle otras variantes: hierbas tales como peperina, menta, poleo
-                y cedrón. En Córdoba es bastante común tomar mate dulce con azúcar.</li>
-            <li> <span>Cuyo:</span> se le suele añadir cáscara de naranja o hierbas como las anteriores.</li>
-            <li> <span>Sur:</span> por lo general se toma amargo, y más caliente que en el resto del país, por las bajas
-                temperaturas que allí existen.</li>
-        </ul>
-    </section>
     </main>
-    <footer>
-        <aside>
-            <img src="multimdia/mateando1.jpg" alt="">
-        </aside>
-        <p>Copyright 2023, Mate.ando todos los derechos reservados.</p>
-        <div class="redes">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <aside>
+                    <img src="multimdia/mateando1.jpg" alt=""><p>Copyright 2023, Mate.ando todos los derechos reservados.</p>
+                <div class="redes">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </aside>
+            </div>
         </div>
     </footer>
     <a href="#" class="subir">
         <i class="fa-solid fa-chevron-up"></i>
     </a>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

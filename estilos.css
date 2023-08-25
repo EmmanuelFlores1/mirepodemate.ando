@@ -7,17 +7,19 @@
 html{
     scroll-behavior: smooth;
 }
+
 header{
-    height: 80px;
+    height: 120px;
     background-color: #6aa84f;
-    padding: 20px;
-    font-size: 22px;
-    display: flex;
-    justify-content: space-between;
+    
 }
 
-header aside img{
-    height: 100%;
+nav aside img{
+    height: 80px;
+    padding: 20px;
+    width: auto;
+    background-color: #6aa84f;
+    color:#6aa84f;
 }
 
 .logo{
@@ -31,31 +33,116 @@ header aside img{
     color: #fbfffe;
 }
 
-.barra{
-    float: right;
+.navbar{
+    float: all;
+    height: 120px;
+    background-color: #6aa84f;
 }
 
-.barra ul{
+.navbar ul{
     list-style: none;
 }
 
-.barra ul li{
+.navbar ul li{
     display: inline-block;
 }
 
-.barra a{
+.navbar a{
     text-decoration: none;
     color: #fbfffe;
     font-size: 16px;
 }
 
-.barra a:hover{
-    color: #001514;
+.navbar a:hover{
+    color: #001514 !important;
+}
+
+.nav-link{
+    color: #fbfffe !important;
 }
 
 main{
     background-color: #6b0504;
     display: flex;
+    flex-direction: column;
+    
+}
+
+
+h2{
+    background-color: rgb(107, 5, 0.2);
+    color: #6aa84f;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0;
+    font-size: bolder;
+}
+
+.nright{
+    background-color: rgb(107, 5, 0.2);
+    color: #fbfffe;
+    font-size: 20px;
+    text-align: center;
+    height:auto;
+        
+}
+
+.nleft{
+    background-color: #fbfffe;
+    image-resolution: 50%;
+}
+
+.p1nleft{
+    background-image: url(multimdia/prepararmate_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    padding: 0;
+}
+.p2nleft{
+    background-image: url(multimdia/prepararmate_2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+.p3nleft{
+    background-image: url(multimdia/prepararmate_3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    padding: 0;
+}
+.p4nleft{
+    background-image: url(multimdia/prepararmate_4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    padding: 0;
+}
+.p5nleft{
+    background-image: url(multimdia/prepararmate_5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    padding: 0;
+}
+.p6nleft{
+    background-image: url(multimdia/prepararmate_6.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    padding: 0;
+}
+
+.video{
+    width: auto;
+    height: auto;
+    border: none !important;
+    background: #fff !important;
+    padding: .9em!important;
+    margin: 2%!important;
+    align-content: center;
+    
 }
 
 .ben{
@@ -69,7 +156,7 @@ main{
 }
 
 .call{
-    width: 80%;
+    width: 100%;
     color: #fbfffe;
     padding: 24px;
 }
@@ -95,6 +182,8 @@ h3{
 
 p{
     margin: 8px;
+    color: #6aa84f;
+    font-weight: bold;
 }
 
 .call ol li{
@@ -122,13 +211,11 @@ p{
     color: #6aa84f;
     background-color: #6b0504;
     text-align: center;
+    padding-bottom: 20px;
+    
 }
 
-section{
-    background-color: #6b0504;
-    margin-bottom: 0px;
-    display: inline-block;
-}
+
 
 section h2{
     font-weight: bold;
@@ -139,11 +226,12 @@ section h2{
 section ul{
     color: #fbfffe;
     margin: 40px;
+    
 }
 
 section ul li{
     margin: 16px;
-    width: 80%;
+    width: 150%;
     padding: 4px;
 }
 section ul li span{
@@ -197,21 +285,23 @@ input[type="submit"] {
 footer{
     background-color: #001514;
     color: #fbfffe;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    text-align:left;
-    padding: 20px;
+    padding: 40px;
+    font-size: 20px;
+    
 }
 
 footer aside img{
     height: 100px;
-    display: block;
-    flex: 1;
-    text-align: left;
-    margin-right: 20px;
+    display: flex;
 }
 
+footer p{
+    text-align: center;
+    color: #fbfffe;
+    padding: 20px;
+    font-size: 20px;
+    
+}
 .redes{
     color: #6aa84f;
     font-size: 40px;
@@ -233,5 +323,13 @@ footer aside img{
     line-height: 40px;
     box-shadow: 0 0 5px #fbfffe;
     border-radius: 4px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 767px){
+    .navbar-collapse{
+        background-color: #6aa84f;
+        display: flex;
+        justify-content: left !important;
+    }
 }
 
