@@ -39,6 +39,12 @@ nav aside img{
     background-color: #6aa84f;
 }
 
+.navbar-toggler:hover{
+    background-color: #6aa84f;
+    color: #fbfffe;
+    
+}
+
 .navbar ul{
     list-style: none;
 }
@@ -84,13 +90,23 @@ h2{
     font-size: 20px;
     text-align: center;
     height:auto;
-        
+    width: 100%;
+    text-align: center;
+    color: #fbfffe;
+    padding: 30px;
+span{
+    font-weight: bold;   
+}
 }
 
 .nleft{
     background-color: #fbfffe;
-    image-resolution: 50%;
-}
+    image-resolution: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 
 .p1nleft{
     background-image: url(multimdia/prepararmate_1.png);
@@ -136,15 +152,17 @@ h2{
 }
 
 .video{
-    width: auto;
-    height: auto;
-    border: none !important;
-    background: #fff !important;
-    padding: .9em!important;
-    margin: 2%!important;
-    align-content: center;
-    
+    object-fit: cover;
+    display: flex;
 }
+
+.mapa {
+    width: 100%; 
+    max-width: none; 
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
 
 .ben{
     align-items: center;
@@ -174,11 +192,22 @@ h3{
 
 .consejos{
     font-size: 24px;
+    text-align: center;
 }
 
 .consejos h2{
     text-align: center;
     margin: 24px;
+}
+
+.consejos img{
+    max-width: 100%;
+    image-rendering: auto;
+    -ms-interpolation-mode: bicubic;
+    max-width: 100%;
+    min-width: auto; 
+    min-height: auto;
+    text-align: center;
 }
 
 p{
@@ -197,6 +226,7 @@ p{
     margin: 20px;
     display: block;
     border-radius: 4px;
+    text-align: center;
 }
 
 .call ul li{
@@ -208,40 +238,36 @@ p{
 .call ul li span{
     font-weight: bold;
 }
+
+.mates{
+    margin: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #fbfffe;
+}
+
+.mates span{
+    font-weight: bold;
+    padding: 20px;
+    
+}
+
+.mates ul li{
+    margin-top: 20px;
+}
+
 .sub1{
     color: #6aa84f;
     background-color: #6b0504;
     text-align: center;
     padding-bottom: 20px;
-    
-}
-
-
-
-section h2{
-    font-weight: bold;
-    text-align: center;
-    color: #fbfffe;
-    margin: 24px;
-}
-section ul{
-    color: #fbfffe;
-    margin: 40px;
-    
-}
-
-section ul li{
-    margin: 16px;
-    width: 150%;
-    padding: 4px;
-}
-section ul li span{
-    font-weight: bold;
 }
 
 form{
     max-width: 400px;
-    margin: 20% auto;
+    margin: auto;
+    margin-left: 25%;
+    margin-bottom: 30px;
 }
 
 label{
@@ -332,5 +358,10 @@ footer p{
         display: flex;
         justify-content: left !important;
     }
+
+    .nright{
+        width: 100;
+    }
+
 }
 
