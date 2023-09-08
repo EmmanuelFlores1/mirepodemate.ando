@@ -113,8 +113,7 @@ main .nright span {
 main .nleft {
   background-color: #fbfffe;
   image-resolution: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,9 +129,22 @@ main .p6nleft {
   background-position: center;
   background-size: 50%;
   padding: 75px;
+  transition: transform 0.3s ease;
+}
+main .p1nleft:hover,
+main .p2nleft:hover,
+main .p3nleft:hover,
+main .p4nleft:hover,
+main .p5nleft:hover,
+main .p6nleft:hover {
+  transform: scale(1.3);
 }
 main .p2nleft {
   background-image: url(multimdia/prepararmate_2.png);
+  transition: transform 0.3 ease;
+}
+main .p2nleft:hover {
+  transform: scale(1.3);
 }
 main .p3nleft {
   background-image: url(multimdia/prepararmate_3.png);
@@ -148,8 +160,7 @@ main .p6nleft {
 }
 
 .video {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: flex;
 }
 
@@ -175,6 +186,13 @@ main .p6nleft {
   width: 100%;
   color: #fbfffe;
   padding: 24px;
+}
+.call ul {
+  margin-top: 20px;
+}
+.call ul li span {
+  font-weight: bold;
+  margin-inline: 5px;
 }
 
 h1 {
@@ -222,13 +240,27 @@ h3 {
 }
 .consejos ul li {
   margin: 8px;
-  -webkit-text-size-adjust: 10px;
-     -moz-text-size-adjust: 10px;
-          text-size-adjust: 10px;
+  text-size-adjust: 10px;
   margin-top: 20px;
 }
 .consejos ul li span {
   font-weight: bold;
+}
+
+.imagen-centrada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.imagen-centrada img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#imagenCarousel .carousel-inner .carousel-item .imagen-centrada img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .mates {
@@ -321,6 +353,55 @@ footer .redes {
   justify-content: center;
   align-items: center;
 }
+footer .redes .fa-brands {
+  transition: color 0.3;
+  cursor: pointer;
+}
+footer .redes .fa-brands:hover {
+  color: rgb(107, 5, 0);
+}
+footer #mapa-sitio {
+  background-color: #001514;
+  padding: 20px;
+  color: #fbfffe;
+  margin-top: 20px;
+}
+footer #mapa-sitio h2 {
+  text-align: center;
+  font-size: 18px;
+  background-color: #001514;
+  color: #fbfffe;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+footer #mapa-sitio ul {
+  list-style: circle;
+}
+footer #mapa-sitio a {
+  text-decoration: none;
+  color: #6aa84f;
+  font-weight: bold;
+  font-size: 16px;
+}
+footer #mapa-sitio a:hover {
+  color: rgb(107, 5, 0);
+}
+footer #mapa-sitio ul li:nth-child(1) {
+  background: linear-gradient(0deg, #000815, transparent) repeat;
+}
+footer #mapa-sitio ul li:nth-child(2) {
+  background: linear-gradient(0deg, #060015, transparent) repeat;
+}
+footer #mapa-sitio ul li:nth-child(3) {
+  background: linear-gradient(0deg, #140015, transparent) repeat;
+}
+footer #mapa-sitio ul li:nth-child(4) {
+  background: linear-gradient(0deg, #150008, transparent) repeat;
+}
+footer #mapa-sitio ul li:nth-child(5) {
+  background: linear-gradient(0deg, #150600, transparent) repeat;
+}
 
 .subir {
   height: 40px;
@@ -346,4 +427,6 @@ footer .redes {
   .nright {
     width: 100;
   }
-}/*# sourceMappingURL=estilos.css.map */
+}
+
+/*# sourceMappingURL=estilos.css.map */

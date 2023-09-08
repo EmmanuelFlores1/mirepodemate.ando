@@ -147,10 +147,18 @@ main {
         background-position: center;
         background-size: 50%;
         padding: 75px;
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.3);
+        }
     }
 
     .p2nleft{
         background-image: url(multimdia/prepararmate_2.png);
+        transition: transform 0.3 ease;
+        &:hover{
+            transform: scale(1.3);
+        }
     }
     .p3nleft{
         background-image: url(multimdia/prepararmate_3.png);
@@ -193,6 +201,17 @@ main {
     width: 100%;
     color: $secondary-color;
     padding: 24px;
+    
+    ul{
+        margin-top: 20px;
+        li{
+            span{
+                font-weight: bold;
+                margin-inline: 5px;
+            }
+        }
+    }
+
 }
 
 h1 {
@@ -250,6 +269,31 @@ h3 {
 
         span {
             font-weight: bold;
+        }
+    }
+}
+
+.imagen-centrada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+#imagenCarousel{
+    .carousel-inner{
+        .carousel-item{
+            .imagen-centrada{
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
         }
     }
 }
@@ -354,6 +398,66 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .fa-brands{
+            transition: color 0.3;
+            cursor: pointer;
+            
+            &:hover{
+                color: $highlight-color;
+            }
+        }
+    }
+
+    
+
+    #mapa-sitio{
+        background-color: #001514;
+        padding: 20px;
+        color: $secondary-color;
+        margin-top: 20px;
+
+        h2{
+            text-align: center;
+            font-size: 18px;
+            background-color: #001514;
+            color: $secondary-color;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        ul{
+            list-style: circle;
+        }
+
+        a{
+            text-decoration: none;
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 16px;
+                        
+            &:hover{
+                color: $highlight-color;
+            }
+        }
+        ul li {
+            
+            $num-colors: 5;
+            $angle: 0deg;
+            
+            
+            @for $i from 1 through $num-colors {
+            
+              $position: ($i - 1) * (20% / $num-colors);
+            
+            
+              $color: adjust-hue(#001514, $i * 40);
+                &:nth-child(#{$i}) {
+                background: linear-gradient(#{$angle}, $color, transparent) repeat;
+                }
+            }
+        }
     }
 }
 
