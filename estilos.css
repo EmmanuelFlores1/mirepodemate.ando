@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables */
 /* Estilos globales */
 * {
@@ -86,7 +87,7 @@ nav aside img {
 main {
   background-color: #6b0504;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 main h2 {
   background-color: rgb(107, 5, 0);
@@ -96,34 +97,40 @@ main h2 {
   margin-bottom: 0;
   font-size: bolder;
 }
-main .nright {
+
+.nright {
   background-color: rgb(107, 5, 0);
   color: #fbfffe;
   font-size: 20px;
   text-align: center;
   height: auto;
-  width: 100%;
+  width: 50%;
   text-align: center;
   color: #fbfffe;
   padding: 30px;
+  box-sizing: border-box;
 }
-main .nright span {
+.nright span {
   font-weight: bold;
 }
-main .nleft {
+
+.nleft {
   background-color: #fbfffe;
   image-resolution: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .p1nleft,
-main .p2nleft,
-main .p3nleft,
-main .p4nleft,
-main .p5nleft,
-main .p6nleft {
+
+.p1nleft,
+.p2nleft,
+.p3nleft,
+.p4nleft,
+.p5nleft,
+.p6nleft {
   background-image: url(multimdia/prepararmate_1.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -131,36 +138,42 @@ main .p6nleft {
   padding: 75px;
   transition: transform 0.3s ease;
 }
-main .p1nleft:hover,
-main .p2nleft:hover,
-main .p3nleft:hover,
-main .p4nleft:hover,
-main .p5nleft:hover,
-main .p6nleft:hover {
+.p1nleft:hover,
+.p2nleft:hover,
+.p3nleft:hover,
+.p4nleft:hover,
+.p5nleft:hover,
+.p6nleft:hover {
   transform: scale(1.3);
 }
-main .p2nleft {
+
+.p2nleft {
   background-image: url(multimdia/prepararmate_2.png);
   transition: transform 0.3 ease;
 }
-main .p2nleft:hover {
+.p2nleft:hover {
   transform: scale(1.3);
 }
-main .p3nleft {
+
+.p3nleft {
   background-image: url(multimdia/prepararmate_3.png);
 }
-main .p4nleft {
+
+.p4nleft {
   background-image: url(multimdia/prepararmate_4.png);
 }
-main .p5nleft {
+
+.p5nleft {
   background-image: url(multimdia/prepararmate_5.png);
 }
-main .p6nleft {
+
+.p6nleft {
   background-image: url(multimdia/prepararmate_6.png);
 }
 
 .video {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: flex;
 }
 
@@ -173,13 +186,27 @@ main .p6nleft {
 }
 
 .ben {
+  display: flex;
   align-items: center;
-  max-width: 100%;
-  height: 20%;
-  display: block;
+  height: 100%;
+  width: 100%;
   justify-content: center;
-  text-align: center;
-  margin: 50px;
+}
+.ben img {
+  height: auto;
+  max-width: 100%;
+}
+
+.imagen-centrada {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.imagen-centrada img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .call {
@@ -187,12 +214,18 @@ main .p6nleft {
   color: #fbfffe;
   padding: 24px;
 }
+.call ol li {
+  margin-left: 20px;
+}
 .call ul {
   margin-top: 20px;
 }
 .call ul li span {
   font-weight: bold;
   margin-inline: 5px;
+}
+.call ul li {
+  margin-left: 20px;
 }
 
 h1 {
@@ -240,7 +273,9 @@ h3 {
 }
 .consejos ul li {
   margin: 8px;
-  text-size-adjust: 10px;
+  -webkit-text-size-adjust: 10px;
+     -moz-text-size-adjust: 10px;
+          text-size-adjust: 10px;
   margin-top: 20px;
 }
 .consejos ul li span {
@@ -293,9 +328,14 @@ h3 {
 
 form {
   max-width: 400px;
-  margin: auto;
-  margin-left: 25%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  z-index: 1;
+  color: #001514;
   margin-bottom: 30px;
+  position: relative;
+  /* Estilos para el botón de enviar personalizado */
 }
 form label {
   display: block;
@@ -305,28 +345,53 @@ form label {
 form input[type=text],
 form input[type=email],
 form textarea {
-  width: 60%;
+  width: 100%;
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 10px;
-  border: 1px solid #001514;
+  border: 1px solid #fbfffe;
   border-radius: 4px;
+  background-color: #6aa84f;
+  color: #001514;
 }
 form input[type=submit] {
   display: block;
   width: 80%;
   padding: 10px;
-  background-color: #001514;
-  color: #fbfffe;
+  background-color: #6aa84f;
+  color: #001514;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 form input[type=submit] {
-  background-color: #001514;
+  background-color: #6aa84f;
 }
 form .required {
   color: #6b0504;
+}
+form .custom-submit-button {
+  width: 150px;
+  padding: 10px;
+  background-color: #6aa84f;
+  color: #fbfffe;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+form .custom-submit-button:hover {
+  background-color: #001514;
+}
+
+.mate-contacto {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1;
+  text-align: center;
 }
 
 footer {
@@ -428,5 +493,33 @@ footer #mapa-sitio ul li:nth-child(5) {
     width: 100;
   }
 }
-
-/*# sourceMappingURL=estilos.css.map */
+@media (max-width: 767px) {
+  .mate-contacto {
+    display: none;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .nleft,
+  .nright {
+    width: 100%;
+    order: unset;
+  }
+}
+@media (max-width: 767px) and (min-width: 768px) and (min-width: 1024px) {
+  .nleft {
+    order: 1;
+    width: 100%;
+  }
+  .nright {
+    order: 2;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .nleft {
+    width: 50%;
+  }
+  .nright {
+    width: 50%;
+  }
+}/*# sourceMappingURL=estilos.css.map */
