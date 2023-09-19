@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Variables */
 /* Estilos globales */
 * {
   margin: 0;
@@ -175,6 +174,13 @@ main h2 {
   -o-object-fit: cover;
      object-fit: cover;
   display: flex;
+}
+
+.pava {
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  background-color: #6b0504;
 }
 
 .mapa {
